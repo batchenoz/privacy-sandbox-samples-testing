@@ -17,18 +17,22 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
-    id 'kotlin-android-extensions'
+    //id 'kotlin-android-extensions'
     id 'kotlin-kapt'
 }
 
 android {
-    compileSdk = 33
-    compileSdkExtension = 4
+    //compileSdk = 33
+    //compileSdkExtension = 4
+
+    compileSdkPreview "TiramisuPrivacySandbox"
 
     defaultConfig {
         applicationId "com.example.measurement.sampleapp"
-        minSdkVersion 33
-        targetVersion 33
+        targetSdkPreview "TiramisuPrivacySandbox"
+        minSdkPreview "TiramisuPrivacySandbox"
+        //minSdkVersion 33
+        //targetVersion 33
         versionCode 3
         versionName "1.02"
 
@@ -81,7 +85,8 @@ dependencies {
     implementation 'androidx.navigation:navigation-ui-ktx:2.3.5'
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    //androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
     //dagger
     implementation "com.google.dagger:dagger-android:2.35.1"
